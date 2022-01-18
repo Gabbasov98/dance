@@ -225,6 +225,26 @@
     <section class='main'>
         <div class='container-1140'>
             <div class='main__inner'>
+                <div class="intro__content-modal">
+                    <div class="intro__content-modal-container">
+                        <div class="intro__content-modal-wrapper">
+                            <div class="intro__content-modal-content">
+                                <div class="intro__content-modal-content-back-close">
+                                    <button type="button" class="intro__content-modal-content-close">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+											<path
+												d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+										</svg>
+									</button>
+                                </div>
+                                <div class="intro__content-modal-content-back-video">
+                                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/Nv-0pGPKE3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+									</iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="main__left">
                     <h1 class="main__title">КУРС ПО БАЧАТЕ</h1>
                     <div class="main__subtitle">от одного из лучших хореографов России </div>
@@ -804,6 +824,7 @@
             </div>
         </div>
     </div>
+
     <div class="for_whom">
         <div class="for_whom__container">
             <div class="for_whom__container-wrapper">
@@ -1180,8 +1201,13 @@
 
             <script>
                 document.querySelectorAll(".qa__item-show").forEach(el => {
+
                     el.onclick = function() {
+                        document.querySelectorAll(".qa__item").forEach(el2 => {
+                            el2.classList.remove("qa__item--open")
+                        });
                         this.closest(".qa__item").classList.toggle("qa__item--open")
+
                     }
                 });
             </script>
